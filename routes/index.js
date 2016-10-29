@@ -6,10 +6,10 @@ var router = express.Router();
 // var Account = require('../models/');
 
 // Sets up the Express app to handle data parsing
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
-app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded({ extended: true }));
+router.use(bodyParser.text());
+router.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 var tables = [
   {
@@ -45,11 +45,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/create', function(req, res, next) {
-  res.render('index', { title: 'Make Reservations' });
+  res.render('create', { title: 'Make Reservations' });
 });
 
 router.get('/view', function(req, res, next) {
-  res.render('index', { title: 'View Reservations' });
+  res.render('view', { title: 'View Reservations' });
 });
 
 router.get('/api/waitlist', function(req, res, next) {
