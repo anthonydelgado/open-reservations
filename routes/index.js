@@ -17,11 +17,11 @@ router.get('/view', function(req, res, next) {
 });
 
 router.get('/api/waitlist', function(req, res, next) {
-  res.json('index', { title: 'View Reservations' });
+  // res.json('index', { title: 'View Reservations' });
 });
 
 router.get('/api/tables', function(req, res, next) {
-  res.json('index', { title: 'View Reservations' });
+  // res.json('index', { title: 'View Reservations' });
 });
 
 module.exports = router;
